@@ -1,0 +1,13 @@
+enter lsusb ocmmand to get vendorID and productID for current keyboards and mouses.
+Careful wil change depending on pc you re on, so in correction use dells
+
+# commands to perform
+
+- copy to vm using scp
+- make to compile kernel module
+- move 99-usb-keyboard.rules in /etc/udev/rules.d/99-usb-keyboard.rules
+- `udevadm control --reload-rules` command to add rule to keyboard/mouse
+- load module : `insmod ./usb_keyboard_module.ko`
+- unplug/plub
+- `dmesg | tail`
+
