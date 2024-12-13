@@ -12,18 +12,18 @@ MODULE_VERSION("1.0");
 
 
 
-static ssize_t my_open(struct inode *inodeptr, struct file *file) {
+static int my_open(struct inode *inodeptr, struct file *file) {
 	printk(KERN_INFO "Device opened\n");
 	return 0;
 }
 
 
-static ssize_t my_read(struct file *file, char __user *buf, size_t len, loff_t *off) {
+static int my_read(struct file *file, char __user *buf, size_t len, loff_t *off) {
 	printk(KERN_INFO "Device read\n");
 	return 0;
 }
 
-static ssize_t my_release(struct file *file, char __user *buf, size_t len, loff_t *off) {
+static int my_release(struct file *file, char __user *buf, size_t len, loff_t *off) {
 	printk(KERN_INFO "Device closed\n");
 	return 0;
 }
@@ -36,7 +36,7 @@ static ssize_t my_release(struct file *file, char __user *buf, size_t len, loff_
 // 	return len;
 // }
 
-static ssize_t my_write(struct file *file, const char __user *buf, size_t len, loff_t *off) {
+static int my_write(struct file *file, const char __user *buf, size_t len, loff_t *off) {
     char *kbuf;
     ssize_t ret;
 
