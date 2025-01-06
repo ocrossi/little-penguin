@@ -7,15 +7,10 @@ Careful wil change depending on pc you re on, so in correction use dells
 - make to compile kernel module
 - move 99-usb-keyboard.rules in /etc/udev/rules.d/99-usb-keyboard.rules
 - `udevadm control --reload-rules` command to add rule to keyboard/mouse
-- unplug/plub
-- `dmesg | tail`
-
-# research for keyboard informations
-
-`dmesg | grep -i keyboard` to get keyboard info
-then we get some information about the device
+- `ls /sys/bus/usb/drivers/usb/`
+- something looks like X-Y corresponds to a usb 
+- `echo 'X-Y' | tee /sys/bus/usb/drivers/usb/unbind` simulates unplugging usb
+- `echo 'X-Y' | tee /sys/bus/usb/drivers/usb/bind` simulates plugging usb
 
 
-
-`udevadm info --query=all --name=/dev/input/eventX`
-where  X would be the inputX you get from the previous command
+with those commands i can test my udev rules
