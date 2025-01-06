@@ -1,3 +1,0 @@
-ACTION=="add", SUBSYSTEM=="usb", ENV{ID_VENDOR_ID}=="413c", ENV{ID_MODEL_ID}=="250e", RUN+="/sbin/modprobe usb_keyboard_module"
-ACTION=="add", SUBSYSTEM=="usb", ENV{ID_VENDOR_ID}=="413c", ENV{ID_MODEL_ID}=="2113", RUN+="/sbin/modprobe usb_keyboard_module"
-

@@ -1,0 +1,1 @@
+savedcmd_/home/octo/little-penguin/ex07/Module.symvers :=  scripts/mod/modpost -M        -o /home/octo/little-penguin/ex07/Module.symvers -n -T /home/octo/little-penguin/ex07/modules.order -i Module.symvers -e 

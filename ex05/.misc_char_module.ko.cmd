@@ -1,0 +1,1 @@
+savedcmd_misc_char_module.ko := ld -r -m elf_x86_64 -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T /home/octo/linux-6.13-rc5/scripts/module.lds -o misc_char_module.ko misc_char_module.o misc_char_module.mod.o .module-common.o

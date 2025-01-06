@@ -1,0 +1,11 @@
+--- linux-6.13-rc2/Makefile	2024-12-08 23:03:39.000000000 +0100
++++ linux-6.13-rc2-patch/Makefile	2025-01-04 14:49:08.094950687 +0100
+@@ -2,7 +2,7 @@
+ VERSION = 6
+ PATCHLEVEL = 13
+ SUBLEVEL = 0
+-EXTRAVERSION = -rc2
++EXTRAVERSION = -thor_kernel
+ NAME = Baby Opossum Posse
+ 
+ # *DOCUMENTATION*
